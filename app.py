@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 """
-Created on Tue Jan  9 12:10:57 2024
-
 @author: Sai
 """
 import streamlit as st
@@ -19,7 +17,7 @@ def chatbot(qn):
     warnings.filterwarnings("ignore", category=UserWarning, module="sklearn.feature_extraction.text")
     
     nltk.download('popular', quiet=True)  # Downloads packages
-    f = open('GIM.txt', 'r', errors='ignore')
+    f = open('data.txt', 'r', errors='ignore')
     raw = f.read()
     raw = raw.lower()
     
@@ -81,10 +79,10 @@ def main():
     import streamlit as st
     import time
     
-    st.title("GIM AdmissionAssistant")
+    st.title("Chatbot")
     intro_message = (
-        "Hello there! How can I assist you with your GIM admission journey? "
-        "Feel free to ask any questions you may have about the admission process, requirements, or any other related queries."
+        "Hello there! How can I assist you today? "
+        "Feel free to ask any questions you may have about the given data."
     )
     
     # Display the introduction message
